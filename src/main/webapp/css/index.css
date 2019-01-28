@@ -1,0 +1,53 @@
+h2 {
+    background-color: #eeeeee;
+}
+
+p {
+    margin-top:0;
+    padding-top:1em;
+    border-bottom: darkblue dotted 1px;
+    background-color: #eeeeee;
+}
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width:80%;
+    border-radius:1.5em;
+}
+
+/** Formulaire droite **/
+
+aside ul {
+    display: inline-block;
+}
+
+aside ul li {
+    margin: 2em;
+    border: none;
+    padding: 0.3em;
+    background: #478bf9;
+    color: #478bf9;
+    width:90%;
+    text-align: center;
+    transition: 0.4s;
+}
+
+aside ul li:hover {
+    border-radius: 1.5em;
+    transition: all 0.4s;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    text-align: center;
+}
+h2 {
+    text-align: right;
+}

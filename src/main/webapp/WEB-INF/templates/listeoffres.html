@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>AideOpsLib - Offres</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/offerlist.css">
+    <script src="js/creationOffre.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="container-fluid"></div>
+<header th:replace="~{fragments::header}"></header>
+
+<main>
+    <div>
+        <ul>
+            <li>
+                <a href="deconnexion">Me déconnecter</a>
+            </li>
+            <li>
+                <a href="profil">Retour au profil</a>
+            </li>
+            <li>
+                <a class="task" href="#" id="getTheOfferCreationPanelButton">Créer une offre</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2 class="head">Consultez les offres disponibles</h2>
+    </div>
+
+    <aside id="newOfferForm" class="newOfferForm">
+        <h3 class="newoffertitle">
+            Proposer une nouvelle offre
+        </h3>
+        <form class="newOffer">
+            <p>
+                <label for="title">Titre de votre Annonce</label>
+                <input type="text" name="title" id="title"  required>
+            </p>
+            <p>
+                <label for="description">Décrivez les détails de l'offre</label>
+                <textarea name="description" id="description"  required></textarea>
+            </p>
+            <p>
+                <label for="startingDate">Date du début de l'offre</label>
+                <input type="date" name="startingDate" id="startingDate" required>
+            </p>
+            <p>
+                <label for="endingDate">Date de fin de l'offre</label>
+                <input type="date" name="endingDate" id="endingDate" required>
+            </p>
+            <p>
+                <label th:for="professionRecherche">Vous cherchez des </label>
+                <input th:if="${profession==1}" type="text" name="professionRecherche" th:id="professionRecherche" value="Docteur" disabled>
+                <input th:if="${profession==2}" type="text" name="professionRecherche" th:id="professionRecherche" value="Aide Operatoire" disabled>
+            </p>
+            <p>
+                <label for="adresseOffre">Rentrez l'adresse</label>
+                <input type="text" name="adresseOffre" id="adresseOffre" required>
+            </p>
+            <p>
+                <label for="etablissement">Etablissement concerné par l'offre </label>
+                <input type="text" name="etablissement" id="etablissement" required>
+            </p>
+            <p>
+                <label for="cpOffre">Code postal </label>
+                <input type="text" name="cpOffre" id="cpOffre" required>
+            </p>
+            <input type="hidden" name="isAideOp" id="isAideOp" th:value="${profession}">
+            <input type="hidden" name="idUser" id="idUser" th:value="${idUser}">
+            <p>
+                <a class="envoyer" href="#" id="createOfferButton">Envoyer l'offre</a>
+                <a class="annuler" href="#" id="closeOfferCreationPanel">Annuler</a>
+            </p>
+        </form>
+    </aside>
+
+
+    <div class="offers-container" th:each="offre:${offrelist}">
+        <a href="#">
+            <article class="offer">
+                <div class="info">
+                    <strong>
+                        <h1 class="titre" th:text="${offre.titre}">Titre de l'offre</h1>
+                    </strong>
+                </div>
+                <div class="info">
+                <p class="date"
+                      th:text="'Du '+${#temporals.format(offre.dateDebut, 'd MMMM yyyy')}+ ' au '+${#temporals.format(offre.dateFin, 'd MMMM yyyy')}">De telle date à telle date</p>
+                </div>
+                <div>
+                    <div class="info">
+                        <p class="codepostal" th:text="${offre.codePostal}">Dans la ville de </p>
+                    </div>
+                    <div class="info">
+                        <p class="desc" th:text="${offre.description}">Description</p>
+                    </div>
+                </div>
+            </article>
+        </a>
+    </div>
+
+
+</main>
+
+</div>
+</body>
+</html>

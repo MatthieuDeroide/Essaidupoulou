@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mainTheme.css">
+    <link rel="stylesheet" href="css/detailprofil.css">
+    <title>AideOpsLIB - Profil</title>
+</head>
+<body>
+<header th:replace="~{fragments::header}"></header>
+<div>
+    <h2 th:if="${profession==1}" th:text="${'Bonjour'+' '+user.nom+' '+user.prenom}">Bonjour</h2>
+    <h2 th:if="${profession==2}" th:text="${'Bonjour Docteur'+' '+user.nom+' '+user.prenom}">Bonjour</h2>
+    <ul>
+        <li><a href="deconnexion">Me déconnecter</a></li>
+        <li><a href="modifierprofile">Modifier vos infos</a></li>
+        <li><a href="profil">Revenir à la page principale</a></li>
+    </ul>
+</div>
+<section>
+    <ul class="info" id="ListeInfos">
+        <li th:text="${'Vous êtes né le '+#temporals.format(user.dateNaissance, 'd MMMM yyyy')}">Votre date de
+            naissance n'a pu être récupérée,merci de contacter le webamster
+        </li>
+        <li th:text="${'Votre numéro '+user.numeroTel}">Votre numéro n'a pu être récupéré</li>
+        <li th:text="${'Vous habitez à '+user.ville+', '+user.adresse+' '+user.codePostal+' en '+user.pays}">
+            Nous n'avons pas réussi à récupérer les informations vous concernant, merci de contacter le webamster
+        </li>
+        <li th:text="${'Occupant le poste de '+user.posteOccupe}">Nous n'avons pas réussi à récupérer les
+            informations vous concernant, merci de contacter le webamster
+        </li>
+    </ul>
+</section>
+
+</body>
+</html>

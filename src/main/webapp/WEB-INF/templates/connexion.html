@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mainTheme.css">
+    <link rel="stylesheet" href="css/connexion.css">
+    <script src="js/connexion.js" type="application/javascript"></script>
+    <title>Connexion</title>
+</head>
+<body>
+<header th:replace="~{fragments::header}"></header>
+<section>
+    <main>
+        <h2>Connexion</h2>
+        <p>Veuillez renseigner vos identifiants</p>
+    </main>
+</section>
+<form method="post">
+    <div>
+        <span class="detail-text">Profession</span>
+        <select class="form-control" name="profession" id="profession" required>
+            <option value="1" selected="selected">Aide opératoire</option>
+            <option value="2">Docteur</option>
+            <option value="3">Admin</option>
+        </select>
+    </div>
+    <div>
+        <span class="detail-text">E-mail</span>
+        <input name="login" id="login" type="email" class="form-control" data-type="email"
+               placeholder="Votre adresse e-mail" required>
+    </div>
+    <div>
+        <span class="detail-text">Mot de passe</span>
+        <input name="password" id="password" type="password" class="form-control" data-type="password"
+               placeholder="Votre mot de passe" required>
+        <p th:if="${err==1}" id="wrongPassword">Le mot de passe que vous avez rentré est faux</p>
+    </div>
+    <div>
+        <input class="envoyer" type="submit" name="button" value="Se connecter" id="button">
+    </div>
+</form>
+</body>
+</html>

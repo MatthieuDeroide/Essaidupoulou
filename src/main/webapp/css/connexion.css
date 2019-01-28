@@ -1,0 +1,51 @@
+main {
+    color: red;
+    text-align: center;
+    background-color: #eeeeee;
+    border-bottom: darkblue dotted 1px;
+}
+
+form {
+    margin: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+input {
+    padding-left: 7px;
+    padding-right: 4px;
+    margin: 10px;
+    border-radius: 1em;
+}
+
+.envoyer {
+    border-radius: 0em;
+    text-decoration: none;
+    background-color: #478bf9;
+    color: white;
+    padding: 0.7em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.envoyer:hover {
+    border-radius: 1.5em;
+    transition: all 0.5s;
+}
+
+span {
+
+    color: darkblue;
+    padding: 0.3em;
+    margin: 0.3em 0;
+    color: darkblue;
+    padding: 0.3em;
+    margin: 0.3em 0;
+
+}
+
+select {
+    margin: 10px;
+    border-radius: 1.5em;
+}

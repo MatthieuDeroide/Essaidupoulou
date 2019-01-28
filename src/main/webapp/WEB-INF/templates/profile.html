@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mainTheme.css">
+    <link rel="stylesheet" href="css/profil.css">
+    <script src="js/buildOffreTableLine.js" type="application/javascript"></script>
+    <script src="js/ProfileOffreTable.js" type="application/javascript"></script>
+
+    <title>Profile</title>
+</head>
+<body>
+<header th:replace="~{fragments::header}"></header>
+
+<main>
+    <h2 th:if="${profession==1}" th:text="${'Bonjour'+' '+user.nom+' '+user.prenom}" >Bonjour</h2>
+    <h2 th:if="${profession==2}" th:text="${'Bonjour Docteur'+' '+user.nom+' '+user.prenom}">Bonjour</h2>
+</main>
+<input type="hidden" id="profession" th:value="${profession}">
+<input type="hidden" id="idUser" th:value="${user.id}">
+<div>
+    <ul>
+        <li><a href="deconnexion">Me déconnecter</a></li>
+        <li><a href="detailprofil">Voir les détails de mon profil</a></li>
+        <li><a href="listeoffres">Consulter les offres disponibles</a></li>
+    </ul>
+</div>
+
+<div class="table">
+
+    <table class="offers-list">
+        <caption>Vos offres </caption>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date de début</th>
+                <th scope="col">Date de fin</th>
+                <th scope="col">Profession recherchée</th>
+                <th scope="col">Etablissement</th>
+                <th scope="col">Code postal</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyForOffers">
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

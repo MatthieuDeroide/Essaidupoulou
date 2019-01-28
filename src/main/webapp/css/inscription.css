@@ -1,0 +1,54 @@
+main {
+    color: red;
+    text-align: center;
+    background-color: #eeeeee;
+    border-bottom: darkblue dotted 1px;
+    margin-bottom: 1em;
+}
+
+form {
+    margin: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+input {
+    padding-left: 7px;
+    padding-right: 4px;
+    margin: 10px;
+    border-radius: 1em;
+}
+
+select {
+    padding-left: 7px;
+    padding-right: 4px;
+    margin: 10px;
+    border-radius: 1em;
+}
+
+label {
+    text-align: center;
+    color: darkblue;
+    padding: 0.3em;
+    margin: 0.3em 0;
+}
+
+form input[type=submit] {
+    border-radius: 0em;
+    text-decoration: none;
+    background-color: #478bf9;
+    color: white;
+    padding: 0.9em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+form input[type=submit]:hover {
+    border-radius: 1.5em;
+    transition: all 0.5s;
+}
+
+fieldset {
+    border: none;
+}

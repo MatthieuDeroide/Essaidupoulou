@@ -1,0 +1,67 @@
+main {
+    text-align: center;
+    background-color: #eeeeee;
+    border-bottom: darkblue dotted 1px;
+}
+
+div {
+    margin: auto;
+    width: 30em;
+    padding: 0;
+}
+
+div h2 {
+    background-color: #eeeeee;
+    color: black;
+}
+
+div ul {
+    display: flex;
+}
+
+div ul li, article {
+    display:inline;
+    margin: 1.1em;
+    border: none;
+    padding: 0.2em;
+    background: #478bf9;
+    color: #fff;
+    width: 160px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+div ul li:hover {
+    border-radius: 1.5em;
+
+    transition: all 0.2s;
+}
+
+div ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+caption {
+    color: red;
+    text-align: center;
+    background-color: #eeeeee;
+    border: darkblue dotted 1px
+}
+
+th {
+    background-color: #eeeeee;
+    color: darkblue;
+    border: darkblue solid 1px;
+    padding: 0.3em;
+}
+
+table {
+    background:#dddddd
+}
+
+.table {
+    margin-left:20%;
+    width: 80%;
+    padding: 0;
+}

@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "RalewayRegular";
+    src: url(../webfonts/Raleway-Regular.woff2) format("woff2"),
+    url(../webfonts/Raleway-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "RalewayThin";
+    src: url(../webfonts/Raleway-Thin.woff2) format("woff2"),
+    url(../webfonts/Raleway-Thin.ttf) format("truetype");
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: RalewayThin, Verdana, sans-serif;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+}
+
+/** Entête **/
+
+header {
+    background: linear-gradient(290deg, rgba(0, 45, 220, .8), rgba(0, 45, 240, 0) 70.71%),
+    linear-gradient(127deg, rgba(0, 100, 240, .8), rgba(0, 100, 240, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 239, 240, .8), rgba(0, 239, 240, 0) 70.71%) no-repeat;
+    margin: 0;
+    line-height: 6em;
+    padding: 1em;
+}
+
+header h1 {
+    text-align: left;
+}
+/** Corps principal **/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: RalewayRegular, Arial, Helvetica, Verdana, sans-serif;
+    background-color: azure;
+}
+aside h1, h2, h3 {
+    color: black;
+}
+
+
+
+
+
+
+
+
+

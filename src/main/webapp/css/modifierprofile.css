@@ -1,0 +1,95 @@
+div {
+    margin: auto;
+    width: 60%;
+    padding: 0;
+}
+
+div ul {
+    display: flex;
+}
+
+div ul li, article {
+    display: inline;
+    margin: 2em;
+    border: none;
+    padding: 0.1em;
+    background: #478bf9;
+    color: #478bf9;
+    text-align: center;
+    transition: 0.2s;
+}
+
+div ul li:hover {
+    border-radius: 1.5em;
+    transition: all 0.2s;
+}
+
+div ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    width: 45%;
+    margin: 1em;
+}
+
+form {
+    margin: 15px;
+    padding: 5px;
+}
+
+input {
+    padding-left: 7px;
+    padding-right: 4px;
+    margin: 2px;
+    border-radius: 1em;
+}
+
+label {
+    color: darkblue;
+    padding: 0.3em;
+    margin: 0.3em 0;
+}
+
+.envoyer {
+    border-radius: 0em;
+    display: block;
+    text-decoration: none;
+    background-color: #478bf9;
+    color: white;
+    padding: 0.7em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 40%;
+}
+
+.envoyer:hover {
+    border-radius: 1.5em;
+    background-color: lightgreen;
+    color: white;
+
+    transition: all 0.5s;
+}
+
+.annuler {
+    border-radius: 0em;
+    display: block;
+    text-decoration: none;
+    margin-top: 1em;
+    background-color: #478bf9;
+    color: white;
+    padding: 0.7em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 40%
+}
+
+.annuler:hover {
+    border-radius: 1.5em;
+    background-color: red;
+    color: white;
+    transition: all 0.5s;
+}

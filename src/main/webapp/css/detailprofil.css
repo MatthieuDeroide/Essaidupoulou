@@ -1,0 +1,35 @@
+div {
+    margin: auto;
+    width: 60%;
+    padding: 0;
+}
+
+div ul {
+    display: flex;
+}
+
+div ul li, article {
+    margin: 2em;
+    border: none;
+    padding: 0.1em;
+    background: #478bf9;
+    color: #478bf9;
+    text-align: center;
+    transition: 0.2s;
+}
+
+div ul li:hover {
+    border-radius: 1.5em;
+    transition: all 0.2s;
+}
+
+div ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    width: 45%;
+    border-bottom: darkblue dotted 1px;
+    margin: 1em;
+}

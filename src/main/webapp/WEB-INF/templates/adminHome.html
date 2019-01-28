@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mainTheme.css">
+    <link rel="stylesheet" href="css/profil.css">
+    <script src="js/admin.js" type="application/javascript"></script>
+    <title>Admin</title>
+</head>
+<body>
+<header th:replace="~{fragments::header}"></header>
+
+<main>
+    <h2> Bienvenue sur l'interface administrateur</h2>
+</main>
+
+<div>
+    <ul>
+        <li><a href="deconnexion">Déconnexion</a> </li>
+        <li><a href="#" id="listAdmin">Voir la liste des admins</a></li>
+        <li><a href="#" id="listDocteur">Voir la liste des docteurs</a> </li>
+        <li><a href="#" id="listAideOp">Voir la liste des aide-opératoires</a> </li>
+        <li><a href="#" id="listOffers">Voir la liste des offres</a> </li>
+    </ul>
+</div>
+
+<div class="table" id="tableListUser">
+
+    <table class="offers-list">
+        <caption>Liste des utilisateurs</caption>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Civilité</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Mail</th>
+            <th scope="col">Numéro</th>
+            <th scope="col">Date de Naissance</th>
+            <th scope="col">Pays</th>
+            <th scope="col">Ville</th>
+            <th scope="col">Code postal</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Etablissement</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody id="tbodyForListing">
+
+        </tbody>
+    </table>
+</div>
+
+<div class="table" id="tableListOffer">
+
+    <table class="offers-list">
+        <caption>Vos offres </caption>
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date de début</th>
+            <th scope="col">Date de fin</th>
+            <th scope="col">Profession recherchée</th>
+            <th scope="col">Etablissement</th>
+            <th scope="col">Code postal</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody id="tbodyForOffers">
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

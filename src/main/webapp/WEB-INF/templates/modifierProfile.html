@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AideOpsLIB - modifier vos infos</title>
+    <link rel="stylesheet" href="css/mainTheme.css">
+    <link rel="stylesheet" href="css/modifierprofile.css">
+</head>
+<body>
+<header th:replace="~{fragments::header}"></header>
+<div>
+    <h2 th:if="${profession==1}" th:text="${'Bonjour'+' '+user.nom+' '+user.prenom}">Bonjour</h2>
+    <h2 th:if="${profession==2}" th:text="${'Bonjour Docteur'+' '+user.nom+' '+user.prenom}">Bonjour</h2>
+
+    <ul>
+        <li><a href="deconnexion">Me déconnecter</a></li>
+        <li><a href="detailprofil">Retour au profil</a></li>
+        <li><a href="modifierpassword">Modifier votre mot de passe</a></li>
+    </ul>
+</div>
+<form method="post">
+    <ul>
+
+        <li><label for="modification_gsm">Votre num&eacute;ro</label><input type="text"
+                                                                            th:value="${user.numeroTel}"
+                                                                            name="modification_gsm"
+                                                                            id="modification_gsm"></li>
+        <li><label for="modification_adresse">Adresse</label><input type="text" th:value="${user.adresse}"
+                                                                    name="modification_adresse"
+                                                                    id="modification_adresse"></li>
+        <li><label for="modification_ville">Ville</label><input type="text" th:value="${user.ville}"
+                                                                name="modification_ville" id="modification_ville"></li>
+        <li><label for="modification_cp">Code Postal</label><input type="text" th:value="${user.codePostal}"
+                                                                   name="modification_cp" id="modification_cp"></li>
+        <li><label for="modification_pays">Pays</label><input type="text" th:value="${user.pays}"
+                                                              name="modification_pays" id="modification_pays"></li>
+        <!--li><label for="modification_poste">Poste Occup&eacute;</label><input type="text"
+                                                                              th:value="${docteur.posteOccupe}"
+                                                                              name="modification_poste"
+                                                                              id="modification_poste"></--li>-->
+
+        <input class="envoyer" type="submit" value="Modifier">
+        <input class="annuler" type="reset" value="R&eacute;tablir les infos pr&eacute;c&eacute;dentes">
+
+
+    </ul>
+</form>
+
+</body>
+</html>
