@@ -110,9 +110,9 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>com.github.jsimone</groupId>
-                                    <artifactId>ProjetS7</artifactId>
+                                    <artifactId>webapp-runner</artifactId>
                                     <version>8.5.23.0</version>
-                                    <destFileName>ProjetS7.jar</destFileName>
+                                    <destFileName>webapp-runner.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
