@@ -84,8 +84,16 @@
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>2.27</version>
         </dependency>
+
+        <dependency>
+        <groupId>com.github.jsimone</groupId>
+        <artifactId>webapp-runner</artifactId>
+        <version>8.5.23.0</version>
+        </dependency>
+
     </dependencies>
     <build>
+        <finalName>ProjetS7</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -107,9 +115,9 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>com.github.jsimone</groupId>
-                                    <artifactId>webapp-runner</artifactId>
-                                    <version>9.0.13.0</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
+                                    <artifactId>ProjetS7</artifactId>
+                                    <version>8.5.23.0</version>
+                                    <destFileName>ProjetS7.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
