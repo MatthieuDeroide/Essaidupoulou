@@ -1,0 +1,1 @@
+web: java -war target/ProjetS7-1.0-SNAPSHOT.war
